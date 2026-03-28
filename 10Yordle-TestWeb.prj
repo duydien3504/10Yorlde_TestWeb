@@ -6,12 +6,12 @@
    <UUID>7f01310a-049a-49ff-9891-e142a8ed0909</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
    <createdVersion>10.4.3</createdVersion>
-   <freeLicense>true</freeLicense>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>ENTERPRISE</modifiedEdition>
-   <modifiedVersion>10.4.3</modifiedVersion>
+   <modifiedVersion>11.0.1</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>E:\New folder\10Yordle-TestWeb\10Yordle-TestWeb.prj</projectFileLocation>
+   <projectFileLocation>/Users/sonnguyen/Desktop/10Yorlde_TestWeb/10Yordle-TestWeb.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
