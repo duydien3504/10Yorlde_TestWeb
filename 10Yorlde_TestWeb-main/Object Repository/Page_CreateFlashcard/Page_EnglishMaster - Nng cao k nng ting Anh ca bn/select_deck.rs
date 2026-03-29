@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_deck</name>
+   <tag></tag>
+   <elementGuidId>2f3f0f4d-f77b-4644-a94b-9e28bbebfc22</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>[name=&quot;deck&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@name = 'deck']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>2109b3d3-202a-4657-ab91-14148d4a9026</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>deck</value>
+      <webElementGuid>0f9c7063-efb9-4349-baf9-62be72da9ba2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sc-kjmhnc idDtYy</value>
+      <webElementGuid>7eb53878-67bc-40f9-a16e-2aaf4524c6f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>-- Chọn deck --1256678Essential Travel PhrasesBusiness Email WritingdemodemoaosksjdujiaBusiness EmailSimple DeckCombined English BeginnerPart 1Deck 1Deck 2Deck 3English Adjectives - Tính từ tiếng AnhCommon English VerbsTestTOEICExampletest123Đây là tôi 123TOEIC 123tạo có hình ảnhtạo có hình ảnh unplash keytạo Ảnh OpenAITest tạo ảnh FL AIFamilyEasyMôn họcFoodMôn họcMôn họcFoodFoodFoodFoodFoodRestaurantabc</value>
+      <webElementGuid>d9e19c97-441d-43d2-85ba-a653a4c0840c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-9d8ffdc5174758470dcf79d3f95e7f28</value>
+      <webElementGuid>6427b621-93e4-4db6-b86a-18ff4fbb1ba4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@name = 'deck']</value>
+      <webElementGuid>1c87e45b-619d-4f52-b88e-b622e3d9bb12</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@name = 'deck']</value>
+      <webElementGuid>96fa9836-376e-444d-a421-9fd0ef1a83b9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'deck' and (text() = '-- Chọn deck --1256678Essential Travel PhrasesBusiness Email WritingdemodemoaosksjdujiaBusiness EmailSimple DeckCombined English BeginnerPart 1Deck 1Deck 2Deck 3English Adjectives - Tính từ tiếng AnhCommon English VerbsTestTOEICExampletest123Đây là tôi 123TOEIC 123tạo có hình ảnhtạo có hình ảnh unplash keytạo Ảnh OpenAITest tạo ảnh FL AIFamilyEasyMôn họcFoodMôn họcMôn họcFoodFoodFoodFoodFoodRestaurantabc' or . = '-- Chọn deck --1256678Essential Travel PhrasesBusiness Email WritingdemodemoaosksjdujiaBusiness EmailSimple DeckCombined English BeginnerPart 1Deck 1Deck 2Deck 3English Adjectives - Tính từ tiếng AnhCommon English VerbsTestTOEICExampletest123Đây là tôi 123TOEIC 123tạo có hình ảnhtạo có hình ảnh unplash keytạo Ảnh OpenAITest tạo ảnh FL AIFamilyEasyMôn họcFoodMôn họcMôn họcFoodFoodFoodFoodFoodRestaurantabc')]</value>
+      <webElementGuid>64198a14-4817-4a2f-83e1-ad0393cecf39</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

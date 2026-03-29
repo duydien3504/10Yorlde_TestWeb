@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Flashcards</name>
+   <tag></tag>
+   <elementGuidId>1852b1d8-a06d-401e-9585-086af4bd3a0e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>.sc-iuhxMu:nth-child(4) .fMlGXd:nth-child(3)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' sc-iuhxMu ') and (position() = 4)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' fMlGXd ') and (position() = 3)]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value></value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>916febbc-5751-460c-8536-c0db2dd9ec52</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sc-ihPnsc fMlGXd</value>
+      <webElementGuid>fa55cf34-11cc-4782-8211-ccdc54e6767b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Flashcards</value>
+      <webElementGuid>249906af-440f-478d-9142-5f5121ad9ef8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-52068cdcfd06d4c73141ffa0bc354eaa</value>
+      <webElementGuid>84ea09a7-f602-4c95-8295-f663b6269e63</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' sc-iuhxMu ') and (position() = 4)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' fMlGXd ') and (position() = 3)]</value>
+      <webElementGuid>b97f1b00-aa67-4684-84c7-1ad6b487b785</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' sc-iuhxMu ') and (position() = 4)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' fMlGXd ') and (position() = 3)]</value>
+      <webElementGuid>eb3f64af-511a-4b33-80ca-f9cfd0a2dfd5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Flashcards' or . = 'Flashcards')]</value>
+      <webElementGuid>516cb6e8-951e-4b18-b50f-d36a9b4d4edc</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
