@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Pomodoroim sChng hcBi kim traBi hc</name>
+   <tag></tag>
+   <elementGuidId>76882419-7587-4da4-a126-6403fbf40ab3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='type']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;type&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>8d9a4162-eb62-4bb8-b4f3-d962a62ac5db</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>type</value>
+      <webElementGuid>8b21fdfb-48d8-441a-aea5-04f11df6121e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sc-cNFoqh bVyUIo</value>
+      <webElementGuid>9f660350-90c0-4f6c-a061-e9167292f273</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>PomodoroĐiểm sốChương họcBài kiểm traBài học</value>
+      <webElementGuid>f2bf6e84-34b5-4ae6-b98d-2b910bb6ab01</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;sc-gVrasc btEuEu&quot;]/div[@class=&quot;sc-nVSyK hTjewX&quot;]/div[@class=&quot;sc-gxDBpp klruer&quot;]/form[1]/div[@class=&quot;sc-gZtkdK kAjTll&quot;]/select[@class=&quot;sc-cNFoqh bVyUIo&quot;]</value>
+      <webElementGuid>5ed6a5dc-4fe2-4898-b802-64e80b02ce59</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='type']</value>
+      <webElementGuid>05b02f58-03cd-45aa-9d47-7a4c7ab0db11</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div[3]/div/form/div[3]/select</value>
+      <webElementGuid>f7146e44-ec1d-428a-9e61-a5a6b1e7a09b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Loại mục tiêu'])[11]/following::select[1]</value>
+      <webElementGuid>29034f8e-310b-4ea6-82b6-5f11beb1659e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mô tả'])[1]/following::select[1]</value>
+      <webElementGuid>031ee56c-2b71-4dc4-ad82-e4e0bb9763b9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Kỹ năng cần tập trung'])[1]/preceding::select[1]</value>
+      <webElementGuid>42654d03-4377-4027-8714-fd8a96cf375f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select</value>
+      <webElementGuid>31e2868f-83e6-477c-b658-9d9117086b70</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'type' and (text() = 'PomodoroĐiểm sốChương họcBài kiểm traBài học' or . = 'PomodoroĐiểm sốChương họcBài kiểm traBài học')]</value>
+      <webElementGuid>8bb601b1-8c91-4aa6-bf04-61babf96dfaa</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

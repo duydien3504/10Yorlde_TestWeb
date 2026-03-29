@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>suite_CreateFlashcard</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>3</numberOfRerun>
+   <pageLoadTimeout>10</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>a5964cc1-316f-406e-83ae-40c03c1ae982</testSuiteGuid>
+   <testCaseLink>
+      <guid>c70ac61d-43b7-4a62-9d9e-d695939fe0a7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Testcase_TaoFlashcard</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>5b094722-72a2-4c1b-81e8-3f2954522257</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Data_CreateFlashcard</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>5b094722-72a2-4c1b-81e8-3f2954522257</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>iddeck</value>
+         <variableId>28d18f90-29e5-4077-be30-d20cf89f22ba</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>5b094722-72a2-4c1b-81e8-3f2954522257</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>front</value>
+         <variableId>f7ddf1e9-2966-4491-959b-ff7fa503fee3</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>5b094722-72a2-4c1b-81e8-3f2954522257</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>back</value>
+         <variableId>ef9e268b-690a-42eb-bb26-dac974d6127e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>5b094722-72a2-4c1b-81e8-3f2954522257</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>example</value>
+         <variableId>10dea775-94e0-453b-9c84-155dd8d0f1ea</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
