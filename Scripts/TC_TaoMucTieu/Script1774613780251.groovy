@@ -1,73 +1,294 @@
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.util.KeywordUtil
 
-// Chắp thêm phần mở trình duyệt để tránh lỗi BrowserNotOpenedException
+// ============================================================
+// TC_TaoMucTieu  –  Flat Style (Manual View hiện đủ Object)
+// Data-driven: 10 test case từ DataTest_TaoMucTieu
+//   TC01 Pomodoro hợp lệ          → Success
+//   TC02 Điểm số hợp lệ           → Success
+//   TC03 Chương học hợp lệ        → Success
+//   TC04 Bài kiểm tra hợp lệ      → Success
+//   TC05 Bài học hợp lệ           → Success
+//   TC06 Trống tiêu đề            → Fail
+//   TC07 Trống số lượng           → Fail
+//   TC08 Giá trị âm (-1)          → Fail
+//   TC09 Ngày quá khứ             → Fail
+//   TC10 Tạo tạm rồi Hủy         → Success
+// ============================================================
+
+// ----------------------------------------------------------------
+// BƯỚC 1 – Mở trình duyệt
+// ----------------------------------------------------------------
 WebUI.openBrowser('')
 WebUI.maximizeWindow()
 WebUI.navigateToUrl('http://localhost:3000/')
 
-// Đăng nhập (Dùng thông tin từ tài khoản của bạn)
-if (WebUI.waitForElementVisible(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_TI  C TI KHON'), 5, FailureHandling.OPTIONAL)) {
-    WebUI.click(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_TI  C TI KHON'))
-    WebUI.setText(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/input_ng nhp_email'), 'themcao20@gmail.com')
-    WebUI.setEncryptedText(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/input_ng nhp_password'), 'tE+PEiSUqqhzstxolVe06g==')
-    WebUI.click(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_ng nhp'))
+// ----------------------------------------------------------------
+// BƯỚC 2 – Đăng nhập nếu chưa có session
+// ----------------------------------------------------------------
+if (WebUI.waitForElementVisible(
+        findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_TI  C TI KHON'),
+        5, FailureHandling.OPTIONAL)) {
+
+    WebUI.click(
+        findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_TI  C TI KHON'))
+
+    WebUI.setText(
+        findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/input_ng nhp_email'),
+        'themcao20@gmail.com')
+
+    WebUI.setEncryptedText(
+        findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/input_ng nhp_password'),
+        'tE+PEiSUqqhzstxolVe06g==')
+
+    WebUI.click(
+        findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/button_ng nhp'))
+
+    WebUI.waitForPageLoad(10)
 }
 
-// Chuyển sang mục Mục tiêu học tập
-WebUI.click(findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/span_Mc tiu hc tp'))
+// ----------------------------------------------------------------
+// BƯỚC 3 – Điều hướng sang Mục tiêu học tập
+// ----------------------------------------------------------------
+WebUI.click(
+    findTestObject('Object Repository/Page_EnglishMaster - Nng cao k nng ting Anh ca bn/span_Mc tiu hc tp'))
 WebUI.waitForPageLoad(5)
 
-// Repository tôi đã tạo giúp bạn (Page_LearningGoals)
-String rP = 'Object Repository/Page_LearningGoals/'
+// ----------------------------------------------------------------
+// BƯỚC 4 – Log thông tin test case hiện tại
+// ----------------------------------------------------------------
+println ''
+println '========================================================'
+println " TieuDe       = ${TieuDe}"
+println " LoaiMucTieu  = ${LoaiMucTieu}"
+println " KyNang       = ${KyNang}"
+println " ExpectedResult = ${ExpectedResult}"
+println '========================================================'
 
-// Nhấn nút thêm mới
-WebUI.click(findTestObject(rP + 'btn_Add_New_Goal'))
-WebUI.waitForElementVisible(findTestObject(rP + 'input_Title'), 5)
+// ================================================================
+// TC10 – Tạo tạm rồi nhấn Hủy (kiểm tra modal đóng lại)
+// ================================================================
+if (TieuDe == 'Tạo tạm rồi hủy') {
 
-// Gán chính xác 13 biến cài đặt từ file dữ liệu của bạn
-if (TieuDe != "") WebUI.setText(findTestObject(rP + 'input_Title'), TieuDe)
-if (MoTa != "") WebUI.setText(findTestObject(rP + 'input_Description'), MoTa)
+    // Mở form
+    WebUI.click(findTestObject('Object Repository/Page_LearningGoals/btn_Add_New_Goal'))
+    WebUI.waitForElementVisible(findTestObject('Object Repository/Page_LearningGoals/input_Title'), 10)
 
-WebUI.selectOptionByLabel(findTestObject(rP + 'select_Type'), LoaiMucTieu, false)
-WebUI.selectOptionByLabel(findTestObject(rP + 'select_Skill'), KyNang, false)
+    // Nhập tiêu đề tạm
+    WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Title'), TieuDe)
 
-// Xử lý thông số theo từng loại mục tiêu đã chọn
-switch (LoaiMucTieu) {
-    case 'Pomodoro':
-        if (SoPhien != "") WebUI.setText(findTestObject(rP + 'input_Target'), SoPhien)
-        if (Lamviec != "") WebUI.setText(findTestObject(rP + 'input_WorkTime'), Lamviec)
-        if (NghiNgan != "") WebUI.setText(findTestObject(rP + 'input_BreakTime'), NghiNgan)
-        if (Saumoi != "") WebUI.setText(findTestObject(rP + 'input_Interval'), Saumoi)
-        if (Nghidai != "") WebUI.setText(findTestObject(rP + 'input_LongBreak'), Nghidai)
-        break
-    case 'Điểm số':
-        if (Diemso != "") WebUI.setText(findTestObject(rP + 'input_Target'), Diemso)
-        if (Hanhoanthanh != "") WebUI.setText(findTestObject(rP + 'input_Deadline'), Hanhoanthanh)
-        break
-    case 'Chương học':
-        if (Sochuong != "") WebUI.setText(findTestObject(rP + 'input_Target'), Sochuong)
-        if (Hanhoanthanh != "") WebUI.setText(findTestObject(rP + 'input_Deadline'), Hanhoanthanh)
-        break
-    case 'Bài kiểm tra':
-        if (Sobaikt != "") WebUI.setText(findTestObject(rP + 'input_Target'), Sobaikt)
-        if (Hanhoanthanh != "") WebUI.setText(findTestObject(rP + 'input_Deadline'), Hanhoanthanh)
-        break
-    case 'Bài học':
-        // Dùng số chương hoặc số bài kiểm tra cho mục tiêu số bài học
-        String val = (Sochuong != "") ? Sochuong : Sobaikt
-        if (val != "") WebUI.setText(findTestObject(rP + 'input_Target'), val)
-        if (Hanhoanthanh != "") WebUI.setText(findTestObject(rP + 'input_Deadline'), Hanhoanthanh)
-        break
+    // Nhấn Hủy
+    WebUI.click(findTestObject('Object Repository/Page_LearningGoals/btn_Cancel'))
+    WebUI.delay(2)
+
+    // Xác nhận modal đã đóng: nút Submit không còn visible
+    boolean modalDaDong = !WebUI.waitForElementVisible(
+        findTestObject('Object Repository/Page_LearningGoals/btn_Submit'),
+        3, FailureHandling.OPTIONAL)
+
+    if (modalDaDong) {
+        println 'TC10 → PASS ✓  Modal đã đóng sau khi nhấn Hủy'
+    } else {
+        KeywordUtil.markFailed('TC10 FAIL: Modal vẫn hiển thị sau khi nhấn Hủy')
+    }
+
+// ================================================================
+// TC01-TC09 – Tạo mục tiêu + Verify toast
+// ================================================================
+} else {
+
+    // ------------------------------------------------------------
+    // BƯỚC 5 – Mở form Thêm mục tiêu mới
+    // ------------------------------------------------------------
+    WebUI.click(findTestObject('Object Repository/Page_LearningGoals/btn_Add_New_Goal'))
+    WebUI.waitForElementVisible(findTestObject('Object Repository/Page_LearningGoals/input_Title'), 10)
+
+    // ------------------------------------------------------------
+    // BƯỚC 6 – Nhập Tiêu đề
+    // ------------------------------------------------------------
+    WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Title'))
+    if (TieuDe != null && TieuDe != '') {
+        WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Title'), TieuDe)
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 7 – Nhập Mô tả
+    // ------------------------------------------------------------
+    WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Description'))
+    if (MoTa != null && MoTa != '') {
+        WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Description'), MoTa)
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 8 – Chọn Loại mục tiêu
+    // ------------------------------------------------------------
+    if (LoaiMucTieu != null && LoaiMucTieu != '') {
+        WebUI.selectOptionByLabel(
+            findTestObject('Object Repository/Page_LearningGoals/select_Type'),
+            LoaiMucTieu, false)
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 9 – Chọn Kỹ năng
+    // ------------------------------------------------------------
+    if (KyNang != null && KyNang != '') {
+        WebUI.selectOptionByLabel(
+            findTestObject('Object Repository/Page_LearningGoals/select_Skill'),
+            KyNang, false)
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 10 – Nhập trường Pomodoro
+    //   (Số phiên / Làm việc / Nghỉ ngắn / Sau mỗi / Nghỉ dài)
+    // ------------------------------------------------------------
+    if (LoaiMucTieu == 'Pomodoro') {
+
+        if (SoPhien != null && SoPhien != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Target'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Target'), SoPhien)
+        }
+
+        if (Lamviec != null && Lamviec != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_WorkTime'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_WorkTime'), Lamviec)
+        }
+
+        if (NghiNgan != null && NghiNgan != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_BreakTime'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_BreakTime'), NghiNgan)
+        }
+
+        if (Saumoi != null && Saumoi != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Interval'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Interval'), Saumoi)
+        }
+
+        if (Nghidai != null && Nghidai != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_LongBreak'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_LongBreak'), Nghidai)
+        }
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 11 – Nhập trường Điểm số
+    //   (Điểm mục tiêu / Hạn hoàn thành)
+    // ------------------------------------------------------------
+    if (LoaiMucTieu == 'Điểm số') {
+
+        if (Diemso != null && Diemso != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Target'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Target'), Diemso)
+        }
+
+        if (Hanhoanthanh != null && Hanhoanthanh != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'), Hanhoanthanh)
+        }
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 12 – Nhập trường Chương học
+    //   (Số chương / Hạn hoàn thành)
+    // ------------------------------------------------------------
+    if (LoaiMucTieu == 'Chương học') {
+
+        if (Sochuong != null && Sochuong != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Target'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Target'), Sochuong)
+        }
+
+        if (Hanhoanthanh != null && Hanhoanthanh != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'), Hanhoanthanh)
+        }
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 13 – Nhập trường Bài kiểm tra
+    //   (Số bài kiểm tra / Hạn hoàn thành)
+    // ------------------------------------------------------------
+    if (LoaiMucTieu == 'Bài kiểm tra') {
+
+        if (Sobaikt != null && Sobaikt != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Target'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Target'), Sobaikt)
+        }
+
+        if (Hanhoanthanh != null && Hanhoanthanh != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'), Hanhoanthanh)
+        }
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 14 – Nhập trường Bài học
+    //   (Số bài học = Sobaikt ưu tiên, fallback Sochuong / Hạn hoàn thành)
+    // ------------------------------------------------------------
+    if (LoaiMucTieu == 'Bài học') {
+
+        String valBaiHoc = (Sobaikt != null && Sobaikt != '') ? Sobaikt
+                         : (Sochuong != null && Sochuong != '') ? Sochuong : ''
+
+        if (valBaiHoc != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Target'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Target'), valBaiHoc)
+        }
+
+        if (Hanhoanthanh != null && Hanhoanthanh != '') {
+            WebUI.clearText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'))
+            WebUI.setText(findTestObject('Object Repository/Page_LearningGoals/input_Deadline'), Hanhoanthanh)
+        }
+    }
+
+    // ------------------------------------------------------------
+    // BƯỚC 15 – Submit form Tạo mục tiêu
+    // ------------------------------------------------------------
+    WebUI.click(findTestObject('Object Repository/Page_LearningGoals/btn_Submit'))
+
+    // ------------------------------------------------------------
+    // BƯỚC 16 – Chờ và đọc Toast notification
+    // ------------------------------------------------------------
+    String toastText = ''
+    if (WebUI.waitForElementVisible(
+            findTestObject('Object Repository/Page_LearningGoals/msg_Toast'),
+            8, FailureHandling.OPTIONAL)) {
+
+        toastText = WebUI.getText(
+            findTestObject('Object Repository/Page_LearningGoals/msg_Toast'),
+            FailureHandling.OPTIONAL) ?: ''
+    }
+
+    println "Toast: [${toastText}]  |  Expected: ${ExpectedResult}"
+
+    // ------------------------------------------------------------
+    // BƯỚC 17 – Verify kết quả theo ExpectedResult
+    //   Success: toast chứa "thành công" hoặc "Đã thêm"
+    //   Fail   : toast chứa "Lỗi" / "lỗi" / "Vui lòng" hoặc rỗng
+    // ------------------------------------------------------------
+    boolean isSuccess = toastText.toLowerCase().contains('thành công') || toastText.contains('Đã thêm')
+    boolean isFail    = toastText.contains('Lỗi') || toastText.contains('lỗi') ||
+                        toastText.contains('Vui lòng') || toastText.trim() == ''
+
+    if (ExpectedResult == 'Success') {
+        if (isSuccess) {
+            println "→ PASS ✓  Tạo mục tiêu thành công"
+        } else {
+            KeywordUtil.markFailed("FAIL: ExpectedResult=Success nhưng toast=[${toastText}]")
+        }
+    } else {
+        if (isFail) {
+            println "→ PASS ✓  Hệ thống từ chối đúng"
+        } else {
+            KeywordUtil.markFailed("FAIL: ExpectedResult=Fail nhưng toast=[${toastText}]")
+        }
+    }
+
+    WebUI.delay(2)
 }
 
-// Lưu mục tiêu
-WebUI.click(findTestObject(rP + 'btn_Submit'))
-
-// Đợi và in kết quả thông báo
-if (WebUI.waitForElementVisible(findTestObject(rP + 'msg_Toast'), 5, FailureHandling.OPTIONAL)) {
-    println "Kết quả: " + WebUI.getText(findTestObject(rP + 'msg_Toast'))
-}
-
-WebUI.delay(2)
+// ----------------------------------------------------------------
+// BƯỚC 18 – Kết thúc
+// ----------------------------------------------------------------
+WebUI.delay(1)
