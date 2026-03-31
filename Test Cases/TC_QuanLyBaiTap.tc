@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Quản lý bài tập Admin - TC_01 đến TC_10</description>
+   <name>TC_QuanLyBaiTap</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>tc-quan-ly-bai-tap-001</testCaseGuid>
+   <steps>
+      <description>TC_01 – Kiểm tra hiển thị trang Quản lý bài tập</description>
+      <name>TC_01_GiaoDien</name>
+      <stepIndex>0</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_02 – Kiểm tra button Tạo bài học mới</description>
+      <name>TC_02_ButtonTaoMoi</name>
+      <stepIndex>1</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_03 – Tạo bài học thành công (Unit=Basics, Name=Lesson 1, XP=10)</description>
+      <name>TC_03_TaoMoiThanhCong</name>
+      <stepIndex>2</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_04 – Validate bỏ trống trường bắt buộc</description>
+      <name>TC_04_ValidateTruongBatBuoc</name>
+      <stepIndex>3</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_05 – Validate input XP nhập ký tự không phải số</description>
+      <name>TC_05_ValidateXP</name>
+      <stepIndex>4</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_06 – Kiểm tra button Sửa hiển thị dữ liệu cũ</description>
+      <name>TC_06_ButtonSua</name>
+      <stepIndex>5</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_07 – Kiểm tra lưu thay đổi thành công (Name=Lesson 3 Updated)</description>
+      <name>TC_07_ButtonCapNhat</name>
+      <stepIndex>6</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_08 – Kiểm tra đổi trạng thái Ẩn/Hiện</description>
+      <name>TC_08_ButtonAnHien</name>
+      <stepIndex>7</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_09 – Kiểm tra xóa bài học khỏi danh sách</description>
+      <name>TC_09_ButtonXoa</name>
+      <stepIndex>8</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+   <steps>
+      <description>TC_10 – Kiểm tra hủy thao tác, không lưu dữ liệu</description>
+      <name>TC_10_ButtonHuy</name>
+      <stepIndex>9</stepIndex>
+      <keyword>callTestCase</keyword>
+      <parameters></parameters>
+      <isOptional>false</isOptional>
+   </steps>
+
+</TestCaseEntity>
