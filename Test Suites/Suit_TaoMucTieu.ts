@@ -104,5 +104,11 @@
          <value>Sobaikt</value>
          <variableId>1e06cdc1-90fc-4f9b-99c1-64843e43ecd5</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId>df25795e-0431-42a2-ace3-299939e2a7bf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ExpectedResult</value>
+         <variableId>25ddd486-6340-4e7f-8548-da1bc85b7ef2</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

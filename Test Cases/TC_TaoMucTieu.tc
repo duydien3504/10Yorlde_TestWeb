@@ -84,6 +84,12 @@
       <value></value>
       <variableId>1e06cdc1-90fc-4f9b-99c1-64843e43ecd5</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>25ddd486-6340-4e7f-8548-da1bc85b7ef2</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
@@ -174,5 +180,12 @@
       <id>1e06cdc1-90fc-4f9b-99c1-64843e43ecd5</id>
       <masked>false</masked>
       <name>Sobaikt</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>25ddd486-6340-4e7f-8548-da1bc85b7ef2</id>
+      <masked>false</masked>
+      <name>ExpectedResult</name>
    </variable>
 </TestCaseEntity>
